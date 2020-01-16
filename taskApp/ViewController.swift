@@ -12,6 +12,7 @@ import UserNotifications
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     //Realmインスタンスを取得する
     let realm = try! Realm() //追加
     //DB内のタスクが格納されるリスト
@@ -41,8 +42,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm"
         
-        let dateString:String = formatter.string(from: task.date)
-        cell.detailTextLabel?.text = dateString
+        let category = taskArray[indexPath.row]
+        cell.detailTextLabel?.text = task.category
         
         return cell
     }
