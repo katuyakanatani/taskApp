@@ -33,13 +33,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
     //Cellに値を設定
     let task = taskArray[indexPath.row]
-    cell.textLabel?.text = task.title
+    cell.textLabel?.text = "\(task.title) [\(task.category)]"
      
     let formatter = DateFormatter()
     formatter.dateFormat = "yyyy-MM-dd HH:mm"
-     
-    cell.detailTextLabel?.text = task.category
-     
+    
     return cell
   }
   //各セルを選択した時に実行されるメソッド
@@ -53,6 +51,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   //検索ボタンおされた時
   func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
     if searchBar.text == "" {
+        taskArray = try! Realm().objects(Task.self)
         tableView.reloadData()
     } else {
         taskArray = try! Realm().objects(Task.self).filter("category == %@", searchBar.text!)
