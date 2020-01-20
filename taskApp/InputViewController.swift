@@ -5,7 +5,6 @@
 //  Created by USER on 2020/01/13.
 //  Copyright © 2020 katuya.kanatani. All rights reserved.
 //
-
 import UIKit
 import RealmSwift
 import UserNotifications
@@ -92,7 +91,6 @@ class InputViewController: UIViewController {
 
     /*
     // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.

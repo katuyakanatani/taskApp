@@ -160,7 +160,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="TAu-x0-Wwp"/>
                     <connections>
-                        <outlet property="category" destination="vbp-Xb-aW8" id="ZCV-cd-Mu5"/>
+                        <outlet property="category1" destination="vbp-Xb-aW8" id="Nmy-pC-0fB"/>
                         <outlet property="contentsTextView" destination="8hY-NM-2Sa" id="0ng-St-cFw"/>
                         <outlet property="datePicker" destination="elD-uJ-083" id="znh-tg-FZZ"/>
                         <outlet property="titleTextField" destination="Zpe-Xr-AhY" id="sKv-0U-4PY"/>
